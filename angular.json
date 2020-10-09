@@ -95,6 +95,11 @@
               "src/styles.scss"
             ],
             "scripts": []
+          },
+          "configurations": {
+              "es5": {
+                  "tsConfig": "tsconfig-es5.spec.json"
+              }
           }
         },
         "lint": {
