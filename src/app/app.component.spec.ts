@@ -1,5 +1,6 @@
 import { TestBed, async } from '@angular/core/testing';
 import { AppComponent } from './app.component';
+import * as fc from 'fast-check';
 
 describe('AppComponent', () => {
   beforeEach(async(() => {
@@ -28,4 +29,10 @@ describe('AppComponent', () => {
     const compiled = fixture.nativeElement;
     expect(compiled.querySelector('.content span').textContent).toContain('ng-test-fast-check-ie11 app is running!');
   });
+
+  
+  it('should now, what positive numbers are', () => {
+    fc.assert(fc.property(fc.nat(), n => n > 0));
+  });
 });
+
